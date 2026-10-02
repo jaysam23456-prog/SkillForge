@@ -1,0 +1,1311 @@
+.container {
+    background-color: darkslateblue;
+    color: #ffffff;
+    height: 40px;
+}
+
+/* Professional Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 18px 40px;
+    margin: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333333;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #4b3f91;
+}
+
+/* Animated underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background: #4b3f91;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Contact Us stays on the right */
+nav .right {
+    margin-left: auto;
+}
+
+nav .right a {
+    background: #4b3f91;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+nav .right a:hover {
+    background: #372d75;
+    color: white;
+}
+
+nav .right a::after {
+    display: none;
+}
+
+/* =========================
+   CONTACT PAGE
+   ========================= */
+
+.top-header {
+    background-color: darkslateblue;
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.top-header nav {
+    display: flex;
+    gap: 28px;
+    margin: 0;
+}
+
+.top-header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-header nav a:hover {
+    color: #d8cfff;
+}
+
+.top-header nav a.active {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+}
+
+/* Contact page */
+
+.contact-page {
+    min-height: 80vh;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f5f5fb;
+}
+
+.contact-page h1 {
+    color: darkslateblue;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.contact-intro {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.contact-card {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e5e5e5;
+}
+
+.contact-card h2 {
+    color: darkslateblue;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.contact-card > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    background-color: #f7f6ff;
+    border-left: 5px solid darkslateblue;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.contact-item strong {
+    color: darkslateblue;
+    font-size: 17px;
+}
+
+.contact-item p {
+    margin: 7px 0 0;
+    color: #444;
+}
+
+.contact-item a {
+    color: darkslateblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #5d4bb5;
+    transform: translateY(-2px);
+}
+
+.hero {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.hero button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: darkviolet;
+}
+
+.hero button a {
+    text-decoration: none;
+    color: white;
+}
+
+.courses-page {
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.course-card {
+    display: inline-block;
+    width: 280px;
+    min-height: 220px;
+    margin: 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    vertical-align: top;
+}
+
+.course-card h2 {
+    color: darkslateblue;
+}
+
+.course-card p {
+    line-height: 1.6;
+}
+
+.course-card button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkslateblue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background-color: purple;
+}
+
+/* SkillForge Buttons */
+
+button {
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: purple;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.code-preview {
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 10px;
+    border: 4px solid #333;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.practice-box {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #f5f3ff;
+    border: 2px solid #4b3f91;
+    border-radius: 15px;
+}
+
+.practice-box h2 {
+    color: #4b3f91;
+}
+
+#codeEditor {
+    width: 100%;
+    height: 220px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 15px 0;
+    background: #1e1e1e;
+    color: white;
+    border: 3px solid #4b3f91;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.practice-box button {
+    background: #4b3f91;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.practice-box button:hover {
+    background: #372d75;
+}
+
+#preview {
+    width: 100%;
+    height: 250px;
+    background: white;
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+.download-button {
+    display: inline-block;
+    background: #4b3f91;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.download-button:hover {
+    background: #372d75;
+    transform: translateY(-2px);
+}
+
+.lesson {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.lesson > h1 {
+    text-align: center;
+    color: #4b3f91;
+    font-size: 42px;
+}
+
+.lesson > p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.lesson h2 {
+    color: #4b3f91;
+    margin-top: 35px;
+}
+
+.practice-box {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f5f3ff;
+    border: 2px solid #4b3f91;
+    border-radius: 15px;
+}
+
+.practice-box h2 {
+    margin-top: 0;
+}
+
+#cssEditor {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 15px 0;
+    background: #1e1e1e;
+    color: white;
+    border: 3px solid #4b3f91;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.practice-box button,
+.exercise button,
+.lesson > button {
+    background: #4b3f91;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.practice-box button:hover,
+.exercise button:hover,
+.lesson > button:hover {
+    background: #372d75;
+}
+
+#cssPreview {
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    background: white;
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+.exercise {
+    margin-top: 40px;
+    padding: 25px;
+    border-left: 5px solid #4b3f91;
+    background: #f8f8f8;
+}
+
+#jsEditor {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 15px 0;
+    background: #1e1e1e;
+    color: white;
+    border: 3px solid #4b3f91;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#jsPreview {
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    background: white;
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+/* =========================
+   PROFILE PAGE
+   ========================= */
+
+.profile-page {
+    min-height: 80vh;
+    background-color: #f5f5fb;
+    padding: 50px 20px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.profile-header h1 {
+    color: darkslateblue;
+    margin: 5px;
+}
+
+.profile-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+.profile-card {
+    background-color: white;
+    max-width: 750px;
+    margin: 0 auto 25px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+    color: darkslateblue;
+    margin-top: 0;
+}
+
+.progress-item {
+    margin: 25px 0;
+}
+
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    height: 12px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: darkslateblue;
+    border-radius: 10px;
+}
+
+.html-progress {
+    width: 75%;
+}
+
+.css-progress {
+    width: 45%;
+}
+
+.js-progress {
+    width: 20%;
+}
+
+.course-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f7f6ff;
+    border-radius: 8px;
+}
+
+.completed {
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+.learning {
+    color: #777;
+    font-weight: bold;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background-color: darkslateblue;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   PROFILE FORM
+   ========================= */
+
+.profile-form-page {
+    min-height: 85vh;
+    background-color: #f5f5fb;
+    padding: 50px 20px;
+}
+
+.profile-form {
+    max-width: 650px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.profile-form h1 {
+    text-align: center;
+    color: darkslateblue;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.form-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Profile picture */
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background-color: darkslateblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.profile-picture button {
+    background-color: transparent;
+    border: 1px solid darkslateblue;
+    color: darkslateblue;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.profile-picture button:hover {
+    background-color: darkslateblue;
+    color: white;
+}
+
+/* Form */
+
+.profile-form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.profile-form input:focus,
+.profile-form select:focus,
+.profile-form textarea:focus {
+    border: 2px solid darkslateblue;
+}
+
+.profile-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.save-profile {
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px;
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-profile:hover {
+    background-color: #5d4bb5;
+}
+
+/* =========================
+   SKILLFORGE PROFILE / SIGN IN
+   ========================= */
+
+.profile-screen {
+    min-height: 100vh;
+    background-color: #f5f5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+.profile-box {
+    width: 100%;
+    max-width: 430px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+.skillforge-logo {
+    text-align: center;
+    color: darkslateblue;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.profile-box h1 {
+    text-align: center;
+    color: #222;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.profile-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Avatar */
+
+.avatar {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background-color: darkslateblue;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Form */
+
+.profile-box label {
+    display: block;
+    margin-bottom: 7px;
+    margin-top: 18px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile-box input,
+.profile-box select {
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: white;
+    outline: none;
+}
+
+.profile-box input:focus,
+.profile-box select:focus {
+    border: 2px solid darkslateblue;
+}
+
+/* Phone number */
+
+.phone-row {
+    display: flex;
+    gap: 8px;
+}
+
+.phone-row select {
+    width: 125px;
+}
+
+.phone-row input {
+    flex: 1;
+    width: 0;
+}
+
+.full-input {
+    width: 100%;
+}
+
+/* Continue button */
+
+.continue-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 28px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: darkslateblue;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.continue-button:hover {
+    background-color: #5d4bb5;
+}
+
+.continue-button:active {
+    transform: scale(0.98);
+}
+
+/* Terms */
+
+.terms {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   PHONE RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .profile-screen {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 35px;
+    }
+
+    .profile-box {
+        padding: 28px 22px;
+        border-radius: 14px;
+        box-shadow: none;
+    }
+
+    .skillforge-logo {
+        font-size: 27px;
+    }
+
+    .profile-box h1 {
+        font-size: 24px;
+    }
+
+    .profile-subtitle {
+        font-size: 14px;
+    }
+
+    .phone-row select {
+        width: 105px;
+    }
+
+}
+
+/* =========================
+   AVATAR SYSTEM
+   ========================= */
+
+.choose-avatar-button {
+    display: block;
+    margin: -10px auto 25px;
+
+    background: transparent;
+    color: darkslateblue;
+
+    border: 1px solid darkslateblue;
+    border-radius: 7px;
+
+    padding: 8px 15px;
+
+    cursor: pointer;
+}
+
+.choose-avatar-button:hover {
+    background-color: darkslateblue;
+    color: white;
+}
+
+
+/* Avatar picker */
+
+.avatar-picker {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.avatar-picker-box {
+    width: 100%;
+    max-width: 400px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.avatar-picker-box h2 {
+    color: darkslateblue;
+}
+
+.avatar-options {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.avatar-options button {
+    height: 65px;
+
+    border: 1px solid #ddd;
+
+    background: #f7f7fb;
+
+    border-radius: 12px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.avatar-options button:hover {
+    transform: scale(1.08);
+
+    border-color: darkslateblue;
+
+    background: #eeeaff;
+}
+
+.close-avatar {
+    padding: 10px 20px;
+
+    border: none;
+
+    background: #ddd;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* Large profile avatar */
+
+.profile-avatar-large {
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: darkslateblue;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+
+    font-weight: bold;
+}
+
+
+/* Saved profile */
+
+.saved-profile {
+    display: none;
+
+    text-align: center;
+}
+
+.profile-information {
+    margin: 25px 0;
+
+    text-align: left;
+}
+
+.profile-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info span {
+    color: #777;
+}
+
+.profile-info strong {
+    color: #333;
+
+    text-align: right;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .avatar-picker-box {
+        padding: 25px 18px;
+    }
+
+    .avatar-options {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .avatar-options button {
+        height: 58px;
+        font-size: 26px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile-info strong {
+        text-align: left;
+    }
+
+}
+
+.done-button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background-color: #4b3f91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.done-button:hover {
+    background-color: #372d75;
+    transform: translateY(-2px);
+}
+
+.profile-nav {
+    margin-left: auto;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: darkslateblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-link:hover {
+    color: darkslateblue;
+}
+
+.profile-link:hover .nav-avatar {
+    transform: scale(1.05);
+}
+
+/* =========================
+   PRACTICE PAGE
+========================= */
+
+.practice-page {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.practice-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.practice-heading h1 {
+    color: darkslateblue;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.practice-heading p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* Categories */
+
+.practice-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.practice-category {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.practice-category:hover {
+    transform: translateY(-5px);
+}
+
+.practice-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.practice-category h2 {
+    color: darkslateblue;
+}
+
+.practice-category p {
+    color: #666;
+    line-height: 1.5;
+    min-height: 48px;
+}
+
+.practice-category button {
+    margin-top: 15px;
+}
+
+
+/* Challenge */
+
+.challenge-area {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.challenge-area h2 {
+    color: darkslateblue;
+}
+
+.challenge-area > p {
+    color: #555;
+}
+
+
+/* Editor */
+
+.editor-container {
+    margin-top: 25px;
+}
+
+#practiceCode {
+    width: 100%;
+    min-height: 300px;
+    padding: 18px;
+    box-sizing: border-box;
+
+    background: #1e1e1e;
+    color: #f5f5f5;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: monospace;
+    font-size: 15px;
+
+    resize: vertical;
+}
+
+
+/* Buttons */
+
+.editor-buttons {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0 25px;
+}
+
+.run-button {
+    background-color: darkslateblue;
+}
+
+.reset-button {
+    background-color: #666;
+}
+
+.reset-button:hover {
+    background-color: #444;
+}
+
+
+/* Preview */
+
+#practicePreview {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+}

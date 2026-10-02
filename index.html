@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>SkillForge | Learn To Code</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+        <h1>SkillForge</h1>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="#">Practice</a>
+            <div class="right">
+            <a href="Contact%20Us.html">Contact Us</a>
+            </div>
+            
+            <div class="profile-nav">
+                <a href="Profile.html" class="profile-link">
+                    <div class="nav-avatar" id="navAvatar">JS</div>
+                    <span id="navProfileName">Profile</span>
+                </a>
+            </div>
+        </nav>
+        
+        <section class="hero">
+            <h1>Hello! Welcome To SkillForge</h1>
+            <h2>Learn. Practice. Build.</h2>
+            <p>
+                Improve your coding skills, learn new technologies, practice what you learn,
+                and build amazing real-world projects. SkillForge gives you a simple place
+                to learn programming step by step, practice your knowledge, and develop the
+                confidence you need to become a better coder. Whether you are just starting
+                your coding journey or already have some experience, you can explore
+                different courses, complete practical exercises, and keep track of your
+                progress as you learn.
+            </p>
+            <button><a href="courses.html">Start Learning</a></button>
+        </section>
+        
+        <script>
+const savedProfile = localStorage.getItem("skillforgeProfile");
+
+if (savedProfile) {
+    const profile = JSON.parse(savedProfile);
+
+    const navName = document.getElementById("navProfileName");
+    const navAvatar = document.getElementById("navAvatar");
+
+    navName.textContent = profile.name;
+
+    if (profile.avatar) {
+        navAvatar.textContent = profile.avatar;
+    } else {
+        const words = profile.name.trim().split(/\s+/);
+
+        if (words.length === 1) {
+            navAvatar.textContent =
+                words[0].charAt(0).toUpperCase();
+        } else {
+            navAvatar.textContent =
+                (words[0].charAt(0) +
+                 words[words.length - 1].charAt(0)).toUpperCase();
+        }
+    }
+}
+</script>
+    </body>
+</html>

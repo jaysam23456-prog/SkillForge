@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Basics | SkillForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>SkillForge</h1>
+    </div>
+
+    
+    <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="Practice.html">Practice</a>
+            <div class="right">
+            <a href="Contact%20Us.html">Contact Us</a>
+            </div>
+        
+        <div class="profile-nav">
+                <a href="Profile.html" class="profile-link">
+                    <div class="nav-avatar" id="navAvatar">JS</div>
+                    <span id="navProfileName">Profile</span>
+                </a>
+            </div>
+    </nav>
+
+    <main class="lesson">
+
+        <h1>CSS Basics</h1>
+
+        <p>
+            Welcome to the CSS Basics course. In this course, you will learn
+            how to style websites, change colors and fonts, create layouts,
+            add spacing, and make your webpages look more attractive and
+            professional.
+        </p>
+
+        <h2>Lesson 1: What is CSS?</h2>
+
+        <p>
+            CSS stands for Cascading Style Sheets. CSS is used to control
+            the appearance and layout of HTML elements. With CSS, you can
+            change colors, fonts, sizes, spacing, borders, backgrounds,
+            and many other visual properties of a webpage.
+        </p>
+
+        <h2>Lesson 2: CSS Selectors</h2>
+
+        <p>
+            CSS selectors allow you to choose which HTML elements you want
+            to style. You can select elements by their tag name, class,
+            ID, or other attributes.
+        </p>
+
+        <h2>Lesson 3: Colors and Fonts</h2>
+
+        <p>
+            CSS allows you to change the color and size of text, choose
+            different fonts, change backgrounds, and control how information
+            appears on the screen.
+        </p>
+
+        <h2>Lesson 4: Borders and Spacing</h2>
+
+        <p>
+            You can use CSS to add borders around elements and control the
+            space inside and outside them using padding and margins.
+        </p>
+
+        <hr>
+
+        <section class="practice-box">
+
+            <h2>Try It Yourself</h2>
+
+            <p>
+                Write some CSS in the editor below and click
+                <strong>Run Code</strong> to see the result.
+            </p>
+
+            <textarea id="cssEditor">
+h1 {
+    color: purple;
+    font-size: 40px;
+}
+
+p {
+    color: blue;
+}
+            </textarea>
+
+            <button onclick="runCSS()">Run Code</button>
+
+            <h3>Preview</h3>
+
+            <iframe id="cssPreview"></iframe>
+
+        </section>
+
+        <section class="exercise">
+
+            <h2>Practice Exercise</h2>
+
+            <p>
+                Create a heading and a paragraph, then use CSS to change
+                their colors and font sizes. Try experimenting with
+                different CSS properties to see what happens.
+            </p>
+
+        </section>
+
+        <br>
+
+        <button onclick="window.location.href='courses.html'">
+            Back To Courses
+        </button>
+
+    </main>
+
+    <script>
+        function runCSS() {
+
+            const css = document.getElementById("cssEditor").value;
+
+            const preview = document.getElementById("cssPreview");
+
+            preview.srcdoc = `
+                <html>
+                <head>
+                    <style>
+                        ${css}
+                    </style>
+                </head>
+
+                <body>
+
+                    <h1>Hello, SkillForge!</h1>
+
+                    <p>
+                        I am learning CSS.
+                    </p>
+
+                </body>
+                </html>
+            `;
+        }
+    </script>
+
+</body>
+</html>

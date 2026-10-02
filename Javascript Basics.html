@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Basics | SkillForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>SkillForge</h1>
+    </div>
+    
+    <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="Practice.html">Practice</a>
+            <div class="right">
+            <a href="Contact%20Us.html">Contact Us</a>
+            </div>
+        
+        <div class="profile-nav">
+                <a href="Profile.html" class="profile-link">
+                    <div class="nav-avatar" id="navAvatar">JS</div>
+                    <span id="navProfileName">Profile</span>
+                </a>
+            </div>
+    </nav>
+
+
+    <main class="lesson">
+
+        <h1>JavaScript Basics</h1>
+
+        <p>
+            Welcome to the JavaScript Basics course. In this course, you will
+            learn how JavaScript makes websites interactive and responsive.
+            You will learn how to work with variables, functions, buttons,
+            events, and basic programming logic.
+        </p>
+
+        <h2>Lesson 1: What is JavaScript?</h2>
+
+        <p>
+            JavaScript is a programming language commonly used to make
+            webpages interactive. It can respond to user actions, change
+            webpage content, perform calculations, and create dynamic
+            features.
+        </p>
+
+        <h2>Lesson 2: Variables</h2>
+
+        <p>
+            Variables allow you to store information that your program can
+            use later. JavaScript provides keywords such as
+            <strong>let</strong> and <strong>const</strong> for creating
+            variables.
+        </p>
+
+        <h2>Lesson 3: Functions</h2>
+
+        <p>
+            A function is a block of code designed to perform a particular
+            task. Functions can be called whenever you need that task to
+            happen.
+        </p>
+
+        <h2>Lesson 4: Events</h2>
+
+        <p>
+            JavaScript can respond to events such as button clicks,
+            keyboard input, and other actions performed by the user.
+        </p>
+
+        <hr>
+
+        <section class="practice-box">
+
+            <h2>Try It Yourself</h2>
+
+            <p>
+                Write JavaScript code in the editor below and click
+                <strong>Run Code</strong> to see the result.
+            </p>
+
+            <textarea id="jsEditor">
+document.getElementById("message").textContent =
+    "Hello, SkillForge!";
+
+document.getElementById("message").style.color =
+    "purple";
+            </textarea>
+
+            <button onclick="runJavaScript()">Run Code</button>
+
+            <h3>Preview</h3>
+
+            <iframe id="jsPreview"></iframe>
+
+        </section>
+
+        <section class="exercise">
+
+            <h2>Practice Exercise</h2>
+
+            <p>
+                Create a JavaScript program that changes the text of a
+                webpage when a button is clicked. Then experiment with
+                different colors and messages.
+            </p>
+
+        </section>
+
+        <br>
+
+        <button onclick="window.location.href='courses.html'">
+            Back To Courses
+        </button>
+
+    </main>
+
+    <script>
+        function runJavaScript() {
+
+            const code =
+                document.getElementById("jsEditor").value;
+
+            const preview =
+                document.getElementById("jsPreview");
+
+            preview.srcdoc = `
+                <html>
+                <body>
+
+                    <h2 id="message">
+                        Waiting for your JavaScript...
+                    </h2>
+
+                    <script>
+                        ${code}
+                    <\/script>
+
+                </body>
+                </html>
+            `;
+        }
+    </script>
+
+</body>
+</html>

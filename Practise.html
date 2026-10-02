@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - SkillForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="top-header">
+    <div class="logo">SkillForge</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="Practice.html" class="active">Practice</a>
+        <a href="Contact Us.html">Contact Us</a>
+
+        <div class="profile-nav">
+            <a href="Profile.html" class="profile-link">
+                <div class="nav-avatar" id="navAvatar">JS</div>
+                <span id="navProfileName">Profile</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+<main class="practice-page">
+
+    <div class="practice-heading">
+        <h1>Practice</h1>
+        <p>Improve your coding skills by solving challenges.</p>
+    </div>
+
+
+    <section class="practice-categories">
+
+        <div class="practice-category">
+            <div class="practice-icon">🌐</div>
+            <h2>HTML</h2>
+            <p>Practice building the structure of web pages.</p>
+            <button onclick="startPractice('html')">
+                Start HTML
+            </button>
+        </div>
+
+        <div class="practice-category">
+            <div class="practice-icon">🎨</div>
+            <h2>CSS</h2>
+            <p>Practice styling and designing websites.</p>
+            <button onclick="startPractice('css')">
+                Start CSS
+            </button>
+        </div>
+
+        <div class="practice-category">
+            <div class="practice-icon">⚡</div>
+            <h2>JavaScript</h2>
+            <p>Practice making websites interactive.</p>
+            <button onclick="startPractice('javascript')">
+                Start JavaScript
+            </button>
+        </div>
+
+    </section>
+
+
+    <section id="challengeArea" class="challenge-area">
+
+        <h2 id="challengeTitle">Choose a practice category</h2>
+
+        <p id="challengeDescription">
+            Select HTML, CSS, or JavaScript above to begin.
+        </p>
+
+        <div class="editor-container">
+
+            <textarea id="practiceCode"
+placeholder="Write your code here..."></textarea>
+
+            <div class="editor-buttons">
+                <button class="run-button" onclick="runPracticeCode()">
+                    ▶ Run Code
+                </button>
+
+                <button class="reset-button" onclick="resetCode()">
+                    ↻ Reset
+                </button>
+            </div>
+
+            <h3>Preview</h3>
+
+            <iframe id="practicePreview"></iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+let currentLanguage = "";
+
+const challenges = {
+
+    html: {
+        title: "HTML Challenge",
+        description: "Create an H1 heading that says 'Welcome to SkillForge'.",
+        code:
+`<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to SkillForge</h1>
+
+</body>
+</html>`
+    },
+
+    css: {
+        title: "CSS Challenge",
+        description: "Change the heading color to purple.",
+        code:
+`<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+h1 {
+    color: purple;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>SkillForge</h1>
+
+</body>
+</html>`
+    },
+
+    javascript: {
+        title: "JavaScript Challenge",
+        description: "Use JavaScript to change the text below to 'Hello SkillForge!'.",
+        code:
+`<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="message">Waiting...</h2>
+
+<script>
+
+document.getElementById("message").textContent =
+"Hello SkillForge!";
+
+<\/script>
+
+</body>
+</html>`
+    }
+
+};
+
+
+function startPractice(language) {
+
+    currentLanguage = language;
+
+    const challenge = challenges[language];
+
+    document.getElementById("challengeTitle").textContent =
+        challenge.title;
+
+    document.getElementById("challengeDescription").textContent =
+        challenge.description;
+
+    document.getElementById("practiceCode").value =
+        challenge.code;
+
+    document.getElementById("challengeArea").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function runPracticeCode() {
+
+    const code =
+        document.getElementById("practiceCode").value;
+
+    document.getElementById("practicePreview").srcdoc =
+        code;
+
+}
+
+
+function resetCode() {
+
+    if (!currentLanguage) {
+        return;
+    }
+
+    document.getElementById("practiceCode").value =
+        challenges[currentLanguage].code;
+
+    document.getElementById("practicePreview").srcdoc =
+        "";
+}
+
+
+</script>
+
+
+</body>
+</html>

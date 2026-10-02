@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <title>HTML Lesson 3 | SkillForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>SkillForge</h1>
+    </div>
+    
+    <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="Practice.html">Practice</a>
+            <div class="right">
+            <a href="Contact%20Us.html">Contact Us</a>
+            </div>
+        
+        <div class="profile-nav">
+                <a href="Profile.html" class="profile-link">
+                    <div class="nav-avatar" id="navAvatar">JS</div>
+                    <span id="navProfileName">Profile</span>
+                </a>
+            </div>
+    </nav>
+
+    <section class="course-content">
+
+        <h1>Lesson 3: Your First Web Page</h1>
+
+        <p>
+            Now it is time to create your first HTML webpage.
+            HTML documents normally contain a head section and a body section.
+        </p>
+
+        <h2>Basic HTML Structure</h2>
+
+        <p>
+            A basic HTML document starts with the doctype declaration,
+            followed by the html, head, and body elements.
+        </p>
+
+        <h2>Your First HTML Code</h2>
+
+        <pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        
+        <h3>You are going to get something like this:</h3>
+        <img class="code-preview" src="Screenshot 2026-10-02 213758.png" alt="Code example">
+
+    </section>
+    
+    <section class="practice-box">
+    <h2>Try It Yourself</h2>
+
+    <p>
+        Type some HTML code in the box below and click
+        <strong>Run Code</strong> to see what it creates.
+    </p>
+
+          <textarea id="codeEditor">
+        <h1>Hello, SkillForge!</h1>
+        <p>I am learning HTML.</p>
+         </textarea>
+
+         <button onclick="runCode()">Run Code</button>
+
+         <h3>Preview</h3>
+
+         <iframe id="preview"></iframe>
+        </section>
+
+        <script>
+        function runCode() {
+         const code = document.getElementById("codeEditor").value;
+         document.getElementById("preview").srcdoc = code;
+        }
+        </script>
+    
+    
+    <h2>Practice Exercise</h2>
+
+        <p>
+            Create a webpage with your name as the main heading
+            and write a short paragraph about yourself. You can use any Code Editor but we recommend that you use Brackets, because while working, you can preview your code lively which makes coding more <i><b>Exciting</b></i>.
+        </p>
+    
+        <a class="download-button"
+        href="https://github.com/brackets-cont/brackets/releases/tag/v2.2.1"
+        target="_blank">
+            Download Brackets
+        </a>
+
+        <button onclick="window.location.href='courses.html'">
+            Back To Courses
+        </button>
+
+</body>
+</html>

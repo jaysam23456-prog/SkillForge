@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillForge | Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="profile-screen">
+
+    <!-- PROFILE SETUP -->
+    <div class="profile-box" id="setupBox">
+
+        <div class="skillforge-logo">
+            SkillForge
+        </div>
+
+        <h1>Create Your Profile</h1>
+
+        <p class="profile-subtitle">
+            Set up your learner profile to get started.
+        </p>
+
+        <div class="avatar" id="setupAvatar">
+            ?
+        </div>
+
+        <button type="button" class="choose-avatar-button"
+                onclick="openAvatarPicker()">
+            Choose Avatar
+        </button>
+
+        <form id="profileForm">
+
+            <label for="name">Your name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+                oninput="updateInitials()"
+            >
+
+            <label for="phone">Phone number</label>
+
+            <div class="phone-row">
+
+                <select id="country">
+                    <option value="+233">🇬🇭 +233</option>
+                    <option value="+234">🇳🇬 +234</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1">🇺🇸 +1</option>
+                </select>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone number"
+                    required
+                >
+
+            </div>
+
+            <label for="level">Learning level</label>
+
+            <select id="level" class="full-input" required>
+                <option value="">Choose your level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+
+            <button type="submit" class="continue-button">
+                Create Profile
+            </button>
+
+        </form>
+
+        <p class="terms">
+            Your profile information is stored on this device.
+        </p>
+
+    </div>
+
+
+    <!-- AVATAR PICKER -->
+
+    <div class="avatar-picker" id="avatarPicker">
+
+        <div class="avatar-picker-box">
+
+            <h2>Choose an Avatar</h2>
+
+            <p>Select an avatar for your SkillForge profile.</p>
+
+            <div class="avatar-options">
+
+                <button type="button" onclick="chooseAvatar('👨‍💻')">👨‍💻</button>
+                <button type="button" onclick="chooseAvatar('👩‍💻')">👩‍💻</button>
+                <button type="button" onclick="chooseAvatar('🧑‍💻')">🧑‍💻</button>
+                <button type="button" onclick="chooseAvatar('👨‍🎓')">👨‍🎓</button>
+                <button type="button" onclick="chooseAvatar('👩‍🎓')">👩‍🎓</button>
+                <button type="button" onclick="chooseAvatar('🧑‍🎓')">🧑‍🎓</button>
+                <button type="button" onclick="chooseAvatar('😎')">😎</button>
+                <button type="button" onclick="chooseAvatar('🚀')">🚀</button>
+
+            </div>
+
+            <button
+                type="button"
+                class="close-avatar"
+                onclick="closeAvatarPicker()">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SAVED PROFILE -->
+
+    <div class="profile-box saved-profile" id="savedProfile">
+
+        <div class="skillforge-logo">
+            SkillForge
+        </div>
+
+        <div class="profile-avatar-large" id="profileAvatar">
+            JS
+        </div>
+
+        <h1 id="profileName">John Sam</h1>
+
+        <p class="profile-subtitle" id="profileLevel">
+            Beginner Developer
+        </p>
+
+        <div class="profile-information">
+
+            <div class="profile-info">
+                <span>Name</span>
+                <strong id="displayName"></strong>
+            </div>
+
+            <div class="profile-info">
+                <span>Phone</span>
+                <strong id="displayPhone"></strong>
+            </div>
+
+            <div class="profile-info">
+                <span>Learning Level</span>
+                <strong id="displayLevel"></strong>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            class="continue-button"
+            onclick="editProfile()">
+            Edit Profile
+        </button>
+        
+        <button class="done-button" onclick="doneProfile()">Done</button>
+
+        </div>
+    
+        
+<script>
+
+let selectedAvatar = "";
+
+
+/* =========================
+   INITIALS
+   ========================= */
+
+function getInitials(name) {
+
+    const words = name.trim().split(/\s+/);
+
+    if (words.length === 1) {
+        return words[0].charAt(0).toUpperCase();
+    }
+
+    return (
+        words[0].charAt(0) +
+        words[words.length - 1].charAt(0)
+    ).toUpperCase();
+}
+
+
+/* =========================
+   UPDATE AVATAR PREVIEW
+   ========================= */
+
+function updateInitials() {
+
+    const name = document.getElementById("name").value;
+    const avatar = document.getElementById("setupAvatar");
+
+    if (selectedAvatar) {
+        avatar.textContent = selectedAvatar;
+        return;
+    }
+
+    if (name.trim() === "") {
+        avatar.textContent = "?";
+    } else {
+        avatar.textContent = getInitials(name);
+    }
+}
+
+
+/* =========================
+   AVATAR PICKER
+   ========================= */
+
+function openAvatarPicker() {
+
+    document.getElementById("avatarPicker").style.display = "flex";
+
+}
+
+function closeAvatarPicker() {
+
+    document.getElementById("avatarPicker").style.display = "none";
+
+}
+
+function chooseAvatar(avatar) {
+
+    selectedAvatar = avatar;
+
+    document.getElementById("setupAvatar").textContent = avatar;
+
+    closeAvatarPicker();
+
+}
+
+
+/* =========================
+   CREATE PROFILE
+   ========================= */
+
+document.getElementById("profileForm").addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const country =
+            document.getElementById("country").value;
+
+        const level =
+            document.getElementById("level").value;
+
+
+        let avatar;
+
+        if (selectedAvatar) {
+
+            avatar = selectedAvatar;
+
+        } else {
+
+            avatar = getInitials(name);
+
+        }
+
+
+        const profile = {
+
+            name: name,
+
+            phone: country + " " + phone,
+
+            level: level,
+
+            avatar: avatar
+
+        };
+
+
+        localStorage.setItem(
+            "skillforgeProfile",
+            JSON.stringify(profile)
+        );
+
+
+        showProfile(profile);
+
+    }
+);
+
+
+/* =========================
+   SHOW PROFILE
+   ========================= */
+
+function showProfile(profile) {
+
+    document.getElementById("setupBox").style.display = "none";
+
+    document.getElementById("savedProfile").style.display = "block";
+
+    document.getElementById("profileAvatar").textContent =
+        profile.avatar;
+
+    document.getElementById("profileName").textContent =
+        profile.name;
+
+    document.getElementById("displayName").textContent =
+        profile.name;
+
+    document.getElementById("displayPhone").textContent =
+        profile.phone;
+
+    document.getElementById("displayLevel").textContent =
+        profile.level;
+
+    document.getElementById("profileLevel").textContent =
+        profile.level + " Learner";
+
+}
+
+
+/* =========================
+   EDIT PROFILE
+   ========================= */
+
+function editProfile() {
+
+    const profile =
+        JSON.parse(localStorage.getItem("skillforgeProfile"));
+
+    document.getElementById("setupBox").style.display = "block";
+
+    document.getElementById("savedProfile").style.display = "none";
+
+    document.getElementById("name").value =
+        profile.name;
+
+    document.getElementById("phone").value =
+        profile.phone.replace(/^\+\d+\s/, "");
+
+    document.getElementById("level").value =
+        profile.level;
+
+    selectedAvatar = profile.avatar;
+
+    document.getElementById("setupAvatar").textContent =
+        profile.avatar;
+
+}
+
+
+/* =========================
+   LOAD SAVED PROFILE
+   ========================= */
+
+const savedProfile =
+    localStorage.getItem("skillforgeProfile");
+
+if (savedProfile) {
+
+    showProfile(
+        JSON.parse(savedProfile)
+    );
+
+}
+    
+    function doneProfile() {
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>
